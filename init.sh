@@ -1,6 +1,5 @@
 #update the system
 DEBIAN_FRONTEND=noninteractive apt update && apt upgrade -y
-DEBIAN_FRONTEND=noninteractive apt autoremove --purge -y
 
 #install docker from the snap store
 snap install docker
@@ -18,6 +17,9 @@ echo "alias dr='screen -dr '" >> /root/.bashrc
 apt purge whoopsie unattended-upgrades ubuntu-report popularity-contest apport apport-symptoms -y
 #prevent ubuntu from installing them again
 apt-mark hold ubuntu-report popularity-contest apport whoopsie apport-symptoms
+
+#Remove leftover programs & dependencies
+DEBIAN_FRONTEND=noninteractive apt autoremove --purge -y
 
 #optional create default docker networks
 #enabled by default to my needs
