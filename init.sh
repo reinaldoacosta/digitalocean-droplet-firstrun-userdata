@@ -2,7 +2,7 @@
 DEBIAN_FRONTEND=noninteractive apt update && apt upgrade -y
 
 #install docker from the snap store
-snap install docker
+DEBIAN_FRONTEND=noninteractive apt install docker-compose docker.io -y
 
 #add alias commands
 echo "alias root='sudo -sE'" >> /root/.bashrc
