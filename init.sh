@@ -26,3 +26,8 @@ DEBIAN_FRONTEND=noninteractive apt autoremove --purge -y
 docker network create database
 docker network create traefik
 docker network create email
+
+
+#This is what should be done to every ubuntu cloud image we run
+#After that just reboot the server to start with our new configuration
+reboot
