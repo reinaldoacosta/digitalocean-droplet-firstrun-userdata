@@ -12,7 +12,7 @@ RUN apt-get install \
 #install docker from the docker offical repo
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && \
     add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" && \
-    apt-get install docker-ce
+    apt-get install docker-ce -y
 
 #add alias commands
 echo "alias root='sudo -sE'" >> /root/.bashrc
