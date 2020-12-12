@@ -2,7 +2,7 @@
 RUN DEBIAN_FRONTEND=noninteractive apt update && apt upgrade -y
 
 #install dependencies
-RUN apt-get install \
+RUN apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -34,8 +34,6 @@ DEBIAN_FRONTEND=noninteractive apt autoremove --purge -y
 #optional create default docker networks
 #enabled by default to my needs
 docker network create database
-docker network create traefik
-docker network create email
 
 
 #This is what should be done to every ubuntu cloud image we run
