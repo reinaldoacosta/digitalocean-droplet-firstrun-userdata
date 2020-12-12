@@ -1,5 +1,5 @@
 #update the system
-RUN DEBIAN_FRONTEND=noninteractive apt update && apt upgrade -y
+DEBIAN_FRONTEND=noninteractive apt update && apt upgrade -y
 
 #install dependencies
 apt-get install -y \
